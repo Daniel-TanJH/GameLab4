@@ -64,7 +64,7 @@ public class OrangeMushroom : MonoBehaviour, ConsumableInterface
         IEnumerator removeEffect(GameObject player)
     {
         yield return new WaitForSeconds(5.0f);
-        player.GetComponent<PlayerController>().maxSpeed /= 10;
+        player.GetComponent<PlayerController>().maxSpeed /= 2;
     }
 
         void onCollisionEnter2D(Collider2D col)
