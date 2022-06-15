@@ -57,14 +57,16 @@ public class OrangeMushroom : MonoBehaviour, ConsumableInterface
     public void consumedBy(GameObject player)
     {
         Debug.Log("Speed Boost");
-        player.GetComponent<PlayerController>().maxSpeed *= 2;
+        player.GetComponent<PlayerController>().maxSpeed *= 5;
+        player.GetComponent<PlayerController>().speed *= 5;
         StartCoroutine(removeEffect(player));
     }
 
         IEnumerator removeEffect(GameObject player)
     {
         yield return new WaitForSeconds(5.0f);
-        player.GetComponent<PlayerController>().maxSpeed /= 2;
+        player.GetComponent<PlayerController>().maxSpeed /= 5;
+        player.GetComponent<PlayerController>().speed /= 5;
     }
 
         void onCollisionEnter2D(Collider2D col)

@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     private int moveRight;
     private Vector2 velocity;
     private bool mariodead = false;
+    private bool amded = false;
     private SpriteRenderer enemySprite;
     private Rigidbody2D enemyBody;
     // Start is called before the first frame update
@@ -54,12 +55,18 @@ public class EnemyController : MonoBehaviour
       if (other.gameObject.CompareTag("Player"))
       {
         float yoffset = (other.transform.position.y - this.transform.position.y);
-        if (yoffset > 0.9f)
+        if (yoffset > 0.8f)
         {
           Debug.Log("Enemy DEAD!");
+          if (amded==false) {
+            CentralManager.centralManagerInstance.increaseScore();
+            CentralManager.centralManagerInstance.spawnFromPooler(ObjectType.turtleEnemy);
+            amded=true;
+          }
+          
           KillSelf();
         }
-        else 
+        else if (amded==false)
         {
           //Debug.Log("Mario DEAD!");
           CentralManager.centralManagerInstance.damagePlayer();
@@ -83,8 +90,7 @@ public class EnemyController : MonoBehaviour
     //Start flatten > Pancake > End of Flatten
     void KillSelf()
     {
-      CentralManager.centralManagerInstance.increaseScore();
-      CentralManager.centralManagerInstance.spawnFromPooler(ObjectType.turtleEnemy);
+      
       StartCoroutine(flatten());
       Debug.Log("Pancake");
     }

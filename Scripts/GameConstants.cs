@@ -20,6 +20,6 @@ public class GameConstants : ScriptableObject
     public float maxOffset = 5.0f;
     public float enemyPatroltime = 2.0f;
 
-    //MushroomController.cs
+    //red and orange mushroom
     public float mushroomSpeed = 5;
 }

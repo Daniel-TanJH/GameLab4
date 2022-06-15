@@ -156,6 +156,16 @@ public class PlayerController : MonoBehaviour
     void PlayerDiesSequence(){
         Debug.Log("MARIO DIES");
         GetComponent<Animator>().SetBool("mariodead",true);
+        GetComponent<Collider2D>().enabled = false;
+        marioBody.AddForce(Vector3.up * 10, ForceMode2D.Impulse);
+        marioBody.SetRotation(180);
+        marioBody.gravityScale = 1;
+        StartCoroutine(dead());
         GameManager.onPlayerDeath -= PlayerDiesSequence;
+    }
+
+    IEnumerator dead(){
+        yield return new WaitForSeconds(1.0f);
+        marioBody.bodyType = RigidbodyType2D.Static;
     }
 }
