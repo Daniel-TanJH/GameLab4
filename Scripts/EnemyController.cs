@@ -84,7 +84,7 @@ public class EnemyController : MonoBehaviour
     void KillSelf()
     {
       CentralManager.centralManagerInstance.increaseScore();
-      //CentralManager.centralManagerInstance.spawnFromPooler(0);
+      CentralManager.centralManagerInstance.spawnFromPooler(ObjectType.turtleEnemy);
       StartCoroutine(flatten());
       Debug.Log("Pancake");
     }

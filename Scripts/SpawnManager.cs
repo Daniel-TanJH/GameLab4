@@ -26,7 +26,7 @@ public class SpawnManager : MonoBehaviour
         Debug.Log("Im awake");
         for (int j=0; j<2; j++)
         {
-            Debug.Log("SPAWN");
+            //Debug.Log("SPAWN");
             int randomvalue = Random.Range(0,2);
             //Debug.Log(randomvalue.ToString());
             if (randomvalue==0)

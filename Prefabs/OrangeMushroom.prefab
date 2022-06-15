@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 1802833614035757515}
   - component: {fileID: -1603270555618828657}
   - component: {fileID: -1319648983073710382}
+  - component: {fileID: 3778979672685108766}
   m_Layer: 7
-  m_Name: ConsummableMushroomSimple
+  m_Name: OrangeMushroom
   m_TagString: Shrooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6220347684422765140
 SpriteRenderer:
@@ -115,11 +116,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8440208107410193641}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32253849a116ac34da1bad646f0f2917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameConstants: {fileID: 11400000, guid: 753715dd91b864b43b55234617163adb, type: 2}
   keepMovingRight: 1
   test: 0
 --- !u!61 &-1319648983073710382
@@ -148,3 +150,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3778979672685108766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8440208107410193641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4239c0a253d0534e9bb2bb6a8bbcb25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameConstants: {fileID: 11400000, guid: 753715dd91b864b43b55234617163adb, type: 2}
+  keepMovingRight: 1
+  t: {fileID: 2800000, guid: e9228f96dd9f7a94d9c1c4945c072529, type: 3}
+  index: 1

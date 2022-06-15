@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1802833614035757515}
   - component: {fileID: -1603270555618828657}
   - component: {fileID: -1319648983073710382}
-  - component: {fileID: 1311772324263760428}
+  - component: {fileID: -5751594225936504393}
   m_Layer: 7
-  m_Name: RedPowerUp
+  m_Name: RedMushroom
   m_TagString: Shrooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32253849a116ac34da1bad646f0f2917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameConstants: {fileID: 0}
+  gameConstants: {fileID: 11400000, guid: 753715dd91b864b43b55234617163adb, type: 2}
   keepMovingRight: 1
   test: 0
 --- !u!61 &-1319648983073710382
@@ -150,7 +150,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1311772324263760428
+--- !u!114 &-5751594225936504393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,4 +165,4 @@ MonoBehaviour:
   gameConstants: {fileID: 11400000, guid: 753715dd91b864b43b55234617163adb, type: 2}
   keepMovingRight: 1
   t: {fileID: 2800000, guid: 07d3de49d272d3346bb0420c5c0db1cc, type: 3}
-  index: 1
+  index: 0

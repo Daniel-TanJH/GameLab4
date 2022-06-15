@@ -9,7 +9,7 @@ public class CentralManager : MonoBehaviour
     public GameObject spawnManagerObject;
     private GameManager gameManager;
     private PowerUpManager powerUpManager;
-    private SpawnManager spawnManager;
+    public SpawnManager spawnManager;
     public static CentralManager centralManagerInstance;
 
     void Awake()
@@ -52,4 +52,9 @@ public class CentralManager : MonoBehaviour
     public void spawnFromPooler(ObjectType i){
         spawnManager.spawnFromPooler(i);
     }
+
+    public void spawnTurtle() {
+        spawnManager.spawnFromPooler(ObjectType.turtleEnemy);
+    }
+
 }

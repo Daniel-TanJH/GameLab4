@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public void increaseScore()
     {
+        Debug.Log("Score Up");
         playerScore += 1;
         score.text = "SCORE: " + playerScore.ToString();
     }

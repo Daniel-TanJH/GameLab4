@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PowerUpManager : MonoBehaviour
 {
     public List<GameObject> powerupIcons;
-    private List<ConsumableInterface> powerups;
-
+    private List<ConsumableInterface> powerups; 
+    
     void  Start()
 	{
 		powerups  =  new  List<ConsumableInterface>();

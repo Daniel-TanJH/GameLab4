@@ -38,11 +38,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown("q"))
         {
-            CentralManager.centralManagerInstance.consumePowerup(KeyCode.Z, this.gameObject);
+            CentralManager.centralManagerInstance.consumePowerup(KeyCode.Q, this.gameObject);
         }
         if (Input.GetKeyDown("e"))
         {
-            CentralManager.centralManagerInstance.consumePowerup(KeyCode.X, this.gameObject);
+            CentralManager.centralManagerInstance.consumePowerup(KeyCode.E, this.gameObject);
         }
 
         /*if (Input.GetKeyDown("a") && faceRightState){

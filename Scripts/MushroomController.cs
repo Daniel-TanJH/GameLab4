@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class MushroomController : MonoBehaviour
 {
-
+    public GameConstants gameConstants;
     private Rigidbody2D mushroomBody;
     private SpriteRenderer mushroomSprite;
     private Vector2 velocity;
     public bool keepMovingRight = true;
     public bool test = true;
-    private float mushroomSpeed = 5;
+    //private float mushroomSpeed = 5;
     private int moveRight = 1;
     
 
@@ -27,7 +27,7 @@ public class MushroomController : MonoBehaviour
 
     }
     void ComputeVelocity(){
-        velocity = new Vector2(moveRight*mushroomSpeed, 0);
+        velocity = new Vector2(moveRight*gameConstants.mushroomSpeed, 0);
     }
     void moveMushroom(){
         mushroomBody.MovePosition(mushroomBody.position + velocity*Time.fixedDeltaTime);
