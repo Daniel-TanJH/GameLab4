@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem[] DustParticle;
     //public Text scoreText;
     private AudioSource marioAudio;
+    private bool mariodead = false;
     
     // Start is called before the first frame update
     void Start()
@@ -53,7 +54,6 @@ public class PlayerController : MonoBehaviour
             faceRightState = true;
             MarioSprite.flipX=false;
         }
-
         if (!onGroundState && countScoreState)
         {
             if (Mathf.Abs(transform.position.x - enemyLocation.position.x) < 0.5f)
@@ -155,5 +155,7 @@ public class PlayerController : MonoBehaviour
 
     void PlayerDiesSequence(){
         Debug.Log("MARIO DIES");
+        GetComponent<Animator>().SetBool("mariodead",true);
+        GameManager.onPlayerDeath -= PlayerDiesSequence;
     }
 }

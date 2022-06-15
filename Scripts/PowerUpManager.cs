@@ -22,6 +22,7 @@ public class PowerUpManager : MonoBehaviour
         Debug.Log("Powerup obtained");
         if (index < powerupIcons.Count)
         {
+            Debug.Log("POWERRRRR");
             powerupIcons[index].GetComponent<RawImage>().texture = texture;
             powerupIcons[index].SetActive(true);
             powerups[index] = i;

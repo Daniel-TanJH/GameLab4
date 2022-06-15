@@ -22,6 +22,7 @@ public class RedMushroom : MonoBehaviour, ConsumableInterface
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            Debug.Log("RedMushroom Touch");
             CentralManager.centralManagerInstance.addPowerup(t, index, this);
             GetComponent<Collider2D>().enabled = false;
         }

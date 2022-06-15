@@ -6,8 +6,10 @@ public class CentralManager : MonoBehaviour
 {
     public GameObject gameManagerObject;
     public GameObject powerupManagerObject;
+    public GameObject spawnManagerObject;
     private GameManager gameManager;
     private PowerUpManager powerUpManager;
+    private SpawnManager spawnManager;
     public static CentralManager centralManagerInstance;
 
     void Awake()
@@ -19,6 +21,7 @@ public class CentralManager : MonoBehaviour
     {
         gameManager = gameManagerObject.GetComponent<GameManager>();
         powerUpManager = powerupManagerObject.GetComponent<PowerUpManager>();  
+        spawnManager = spawnManagerObject.GetComponent<SpawnManager>();
     }
 
     public void increaseScore()
@@ -42,6 +45,11 @@ public class CentralManager : MonoBehaviour
 
     public void addPowerup(Texture t, int i, ConsumableInterface c)
     {
+        Debug.Log("POWERRRRR");
         powerUpManager.addPowerup(t,i,c);
+    }
+
+    public void spawnFromPooler(ObjectType i){
+        spawnManager.spawnFromPooler(i);
     }
 }

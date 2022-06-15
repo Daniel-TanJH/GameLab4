@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameConstants gameConstants;
 
-    void spawnFromPooler(ObjectType i)
+    public void spawnFromPooler(ObjectType i)
     {
         GameObject item = ObjectPooler.SharedInstance.GetPooledObject(i);
         if (item != null){
@@ -24,11 +24,11 @@ public class SpawnManager : MonoBehaviour
         void Awake()
     {
         Debug.Log("Im awake");
-        for (int j=0; j<3; j++)
+        for (int j=0; j<2; j++)
         {
             Debug.Log("SPAWN");
             int randomvalue = Random.Range(0,2);
-            Debug.Log(randomvalue.ToString());
+            //Debug.Log(randomvalue.ToString());
             if (randomvalue==0)
             {
                 spawnFromPooler(ObjectType.turtleEnemy);

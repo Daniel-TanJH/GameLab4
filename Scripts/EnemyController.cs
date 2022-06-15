@@ -10,12 +10,14 @@ public class EnemyController : MonoBehaviour
     //private float enemyPatroltime = 2.0f;
     private int moveRight;
     private Vector2 velocity;
-
+    private bool mariodead = false;
+    private SpriteRenderer enemySprite;
     private Rigidbody2D enemyBody;
     // Start is called before the first frame update
     void Start()
     {
         enemyBody = GetComponent<Rigidbody2D>();
+        enemySprite = GetComponent<SpriteRenderer>();
         // get the starting position
         originalX = transform.position.x;
         moveRight = Random.Range(0,2) == 0 ? -1 : 1;
@@ -73,13 +75,16 @@ public class EnemyController : MonoBehaviour
 
     void EnemyRejoice()
     {
-      Debug.Log("JUMP");
+      GetComponent<Animator>().SetBool("mariodead", true);
+      velocity = Vector3.zero;
+      GameManager.onPlayerDeath -= EnemyRejoice;
     }
 
     //Start flatten > Pancake > End of Flatten
     void KillSelf()
     {
-      //CentralManager.centralManagerInstance.increaseScore();
+      CentralManager.centralManagerInstance.increaseScore();
+      //CentralManager.centralManagerInstance.spawnFromPooler(0);
       StartCoroutine(flatten());
       Debug.Log("Pancake");
     }
@@ -87,8 +92,8 @@ public class EnemyController : MonoBehaviour
     IEnumerator flatten()
     {
       Debug.Log("Start flatten");
-      int steps = 10;
-      float stepper = 0.2f/(float) steps;
+      int steps = 5;
+      float stepper = 1.0f/(float) steps;
 
       for (int i=0; i<steps; i++)
       {

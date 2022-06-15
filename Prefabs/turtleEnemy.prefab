@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6044231217103703648}
   - component: {fileID: 7471141512975853525}
   - component: {fileID: 1387779038894478760}
+  - component: {fileID: -3305345870655193195}
   m_Layer: 0
   m_Name: turtleEnemy
   m_TagString: Enemy
@@ -147,3 +148,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameConstants: {fileID: 11400000, guid: 753715dd91b864b43b55234617163adb, type: 2}
+--- !u!95 &-3305345870655193195
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136175479726284975}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cff1724b745bbb043baa5c41a6641e6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
