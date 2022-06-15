@@ -21,7 +21,6 @@ public class CentralManager : MonoBehaviour
     {
         gameManager = gameManagerObject.GetComponent<GameManager>();
         powerUpManager = powerupManagerObject.GetComponent<PowerUpManager>();  
-        spawnManager = spawnManagerObject.GetComponent<SpawnManager>();
     }
 
     public void increaseScore()
